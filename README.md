@@ -1,4 +1,4 @@
-# DCGAN training for Multi-GPU
+# DCGAN training for Multi-GPU from scrach using PyTorch
 
 This project implements a model based on the paper Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks and the original GAN paper by Ian Goodfellow et al. The code includes `torchrun` capabilities for distributed training on a single cluster.
 

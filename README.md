@@ -1,4 +1,4 @@
-# Project Title
+# DCGAN training for Multi-GPU
 
 This project implements a model based on the paper Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks and the original GAN paper by Ian Goodfellow et al. The code includes `torchrun` capabilities for distributed training on a single cluster.
 

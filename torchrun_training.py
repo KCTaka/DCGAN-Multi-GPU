@@ -27,10 +27,6 @@ class Trainer():
         self.D = D.to(self.device)
         self.G = G.to(self.device)
         
-        if os.path.exists(checkpoints_dir):
-            print(f'Loading checkpoint: {checkpoints_dir}')
-            self.load_checkpoint(checkpoints_dir)
-        
         # Wrap models with DDP
         if self.world_size > 1:
             self.D = DDP(self.D, device_ids=[self.rank])
@@ -66,6 +62,10 @@ class Trainer():
         self.history = {'d_loss': [], 'g_loss': [], 'epoch': []}
         self.start_epoch = 0
         self.save_period = save_period
+        
+        if os.path.exists(checkpoints_dir):
+            print(f'Loading checkpoint: {checkpoints_dir}')
+            self.load_checkpoint(checkpoints_dir)
         
     def activate_model_params(self, model, requires_grad=True):
         for param in model.parameters():

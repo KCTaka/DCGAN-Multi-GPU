@@ -1,0 +1,17 @@
+site_name: DCGAN Multi GPU
+site_url: https://kctaka.github.io/DCGAN-Multi-GPU/
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Reflection: reflection.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

@@ -1,0 +1,7 @@
+matplotlib
+tqdm
+gdown
+torchvision
+torch
+autoroot
+autorootcwd
